@@ -1,1 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+.nav-item:hover {
+    color: #1a2326;
+    text-decoration: none;
+    border-color: #2b85e7;
+    border-radius: 4px;
+    box-shadow: 0 8px 8px rgba(1,67,163,.24), 0 0 8px rgba(1,67,163,.12), 0 6px 18px rgba(43,133,231,.12);
+    -webkit-transform: translateY(-2px);
+    transform: translateY(-2px);
+}
+li.nav-item {
+    padding: 0px 10px;
+}
+.card {
+    transition: box-shadow .28s cubic-bezier(.4,0,.2,1);
+    box-shadow: 0 1px 4px 0 rgba(10,16,20,.37);
+}
+.card-body {
+    padding: 0;
+}
