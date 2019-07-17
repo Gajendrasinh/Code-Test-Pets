@@ -9,7 +9,7 @@ import { HttpService } from './../services/http.service';
 export class OwnersComponent implements OnInit {
 
   ownersList:any = [];
-
+  petsList:any = [];
   constructor(public httpService : HttpService) { 
 
   }
@@ -20,10 +20,8 @@ export class OwnersComponent implements OnInit {
 
   getOwnersList(){
     this.httpService.httpRequest('owners', '', 'get').then(resp=>{
-     console.log(resp)
+     this.ownersList = resp;
     })
-  
   }
-
   
 }

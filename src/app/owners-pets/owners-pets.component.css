@@ -1,0 +1,8 @@
+
+.table-custom > tr > th {
+    padding-right: 8px;
+}
+
+.table-custom > tr > td {
+    padding-right: 10px;
+}

@@ -1,0 +1,34 @@
+<table class="table-custom mb-4" *ngIf="ownerDetails != ''">
+    <tr>
+        <th>
+            Name :
+        </th>
+        <td>
+            {{ownerDetails.name}}
+        </td>
+
+        <th>
+            Gender :
+        </th>
+        <td>
+            {{ownerDetails.gender}}
+        </td>
+
+        <th>
+            Age :
+        </th>
+        <td>
+            {{ownerDetails.age}}
+        </td>
+    </tr>
+</table>
+<ul class="list-group" *ngIf="ownerDetails != ''">
+    <li class="list-group-item" *ngFor="let pet of ownerDetails.pets  | groupBy:'type'">
+        {{pet.key}}
+        <ul class="custom-list">
+            <li  *ngFor="let value of pet.value  | orderBy:'name' : 'asc'">
+                {{value.name}}
+            </li>
+        </ul>
+    </li>
+</ul>
